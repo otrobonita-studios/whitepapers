@@ -1,0 +1,24 @@
+# LibreOffice / Word lock and backup files
+.~lock.*#
+*.odt#
+~$*
+
+# OS noise
+Thumbs.db
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Scratch renders — commit only what lives under a paper's final/
+*.tmp.zip
+
+# Large media — keep binaries out of git history.
+# Podcasts and video ship via the site or a CDN, not the papers repo.
+*.m4a
+*.mp3
+*.wav
+*.aac
+*.mp4
+*.mov

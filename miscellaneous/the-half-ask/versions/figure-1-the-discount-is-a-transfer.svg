@@ -1,0 +1,141 @@
+<svg viewBox="0 0 900 1215" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#6E747D"/>
+    </marker>
+    <marker id="arD" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#8A1F2B"/>
+    </marker>
+    <marker id="arP" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#1D4E5F"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="1215" fill="#FBFBF9"/>
+
+  <!-- ============ HEADER ============ -->
+  <text x="40" y="52" font-size="12" letter-spacing="2.4" fill="#6E747D">FIGURE 1</text>
+  <text x="40" y="96" font-family="Georgia, serif" font-size="30" fill="#16181C">The discount is not a saving.</text>
+  <text x="40" y="132" font-family="Georgia, serif" font-size="30" fill="#16181C">It is a <tspan font-style="italic">transfer</tspan>.</text>
+  <line x1="40" y1="156" x2="860" y2="156" stroke="#C9CCD1" stroke-width="1"/>
+
+  <!-- ============ THE NEED ============ -->
+  <text x="450" y="192" text-anchor="middle" font-size="12" letter-spacing="2" fill="#6E747D">THE NEED</text>
+  <rect x="262" y="206" width="376" height="56" fill="#FFFFFF" stroke="#16181C" stroke-width="1.5"/>
+  <text x="450" y="230" text-anchor="middle" font-size="15" font-weight="600" fill="#16181C">What would genuinely solve this</text>
+  <text x="450" y="250" text-anchor="middle" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="12" fill="#6E747D">FULL PRICE · not yet costed</text>
+
+  <path d="M 400 262 L 400 284 L 235 284 L 235 316" fill="none" stroke="#8A1F2B" stroke-width="1.5" marker-end="url(#arD)"/>
+  <path d="M 500 262 L 500 284 L 665 284 L 665 316" fill="none" stroke="#1D4E5F" stroke-width="1.5" marker-end="url(#arP)"/>
+
+  <!-- ============ LEFT COLUMN : DISCOUNT PATH ============ -->
+  <text x="40" y="352" font-family="Georgia, serif" font-size="19" fill="#8A1F2B">The discount path</text>
+  <line x1="40" y1="364" x2="430" y2="364" stroke="#8A1F2B" stroke-width="2"/>
+
+  <!-- private price list -->
+  <rect x="40" y="384" width="390" height="150" fill="#F1EDEE" stroke="#8A1F2B" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <text x="56" y="408" font-size="15" font-weight="600" fill="#8A1F2B">The private price list</text>
+  <text x="56" y="426" font-size="12.5" fill="#6E747D">consulted silently · never written down</text>
+  <line x1="56" y1="438" x2="414" y2="438" stroke="#C9CCD1"/>
+  <g font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="12.5" fill="#16181C">
+    <text x="56" y="458">team velocity</text><text x="414" y="458" text-anchor="end" fill="#6E747D">34 pts · 2023</text>
+    <text x="56" y="478">"we tried that"</text><text x="414" y="478" text-anchor="end" fill="#6E747D">never retested</text>
+    <text x="56" y="498">what they can absorb</text><text x="414" y="498" text-anchor="end" fill="#6E747D">assumed</text>
+    <text x="56" y="518">cost of asking</text><text x="414" y="518" text-anchor="end" fill="#6E747D">priced in full</text>
+  </g>
+  <line x1="235" y1="534" x2="235" y2="562" stroke="#8A1F2B" stroke-width="1.5" marker-end="url(#arD)"/>
+
+  <!-- the half-ask -->
+  <text x="40" y="586" font-size="12" letter-spacing="2" fill="#6E747D">THE HALF-ASK</text>
+  <rect x="40" y="598" width="390" height="26" fill="none" stroke="#C9CCD1" stroke-width="1"/>
+  <line x1="40" y1="611" x2="430" y2="611" stroke="#8A1F2B" stroke-width="1.2"/>
+  <text x="438" y="615" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="11" fill="#C9CCD1">was</text>
+  <rect x="40" y="632" width="195" height="30" fill="#8A1F2B"/>
+  <text x="52" y="652" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="12.5" fill="#FBFBF9">WHAT WAS ASKED</text>
+  <text x="248" y="652" font-size="12.5" fill="#6E747D">reasonable · well-formed · feasible</text>
+  <line x1="235" y1="662" x2="235" y2="690" stroke="#8A1F2B" stroke-width="1.5" marker-end="url(#arD)"/>
+
+  <!-- shipped -->
+  <rect x="40" y="702" width="390" height="46" fill="#FFFFFF" stroke="#C9CCD1" stroke-width="1"/>
+  <text x="235" y="722" text-anchor="middle" font-size="14.5" fill="#16181C">Backlog → estimated → built → shipped</text>
+  <text x="235" y="739" text-anchor="middle" font-size="12.5" fill="#6E747D">delivery metrics: on time, on budget ✓</text>
+  <text x="235" y="770" text-anchor="middle" font-size="12.5" font-style="italic" fill="#8A1F2B">The saving is recorded here. The cost is not.</text>
+  <line x1="235" y1="780" x2="235" y2="806" stroke="#8A1F2B" stroke-width="1.5" marker-end="url(#arD)"/>
+
+  <!-- receipt -->
+  <path d="M 40 818 L 430 818 L 430 1078 L 414 1070 L 398 1078 L 382 1070 L 366 1078 L 350 1070 L 334 1078 L 318 1070 L 302 1078 L 286 1070 L 270 1078 L 254 1070 L 238 1078 L 222 1070 L 206 1078 L 190 1070 L 174 1078 L 158 1070 L 142 1078 L 126 1070 L 110 1078 L 94 1070 L 78 1078 L 62 1070 L 46 1078 L 40 1074 Z" fill="#FFFFFF" stroke="#8A1F2B" stroke-width="1.2"/>
+  <text x="235" y="842" text-anchor="middle" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="12" letter-spacing="1.5" fill="#8A1F2B">WHERE THE DISCOUNT ACTUALLY LIVES</text>
+  <line x1="56" y1="854" x2="414" y2="854" stroke="#C9CCD1" stroke-dasharray="2 3"/>
+  <g font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="12.5" fill="#16181C">
+    <text x="56" y="878">Customer support</text><text x="414" y="878" text-anchor="end" fill="#6E747D">recurring</text>
+    <text x="56" y="904">Operations headcount</text><text x="414" y="904" text-anchor="end" fill="#6E747D">recurring</text>
+    <text x="56" y="930">Everyone's working day</text><text x="414" y="930" text-anchor="end" fill="#6E747D">× whole org</text>
+    <text x="56" y="956">Mandated foundations</text><text x="414" y="956" text-anchor="end" fill="#6E747D">inherited</text>
+    <text x="56" y="982">Future velocity</text><text x="414" y="982" text-anchor="end" fill="#6E747D">compounding</text>
+    <text x="56" y="1008">Compliance rework</text><text x="414" y="1008" text-anchor="end" fill="#6E747D">deferred + amplified</text>
+    <text x="56" y="1034">Retention</text><text x="414" y="1034" text-anchor="end" fill="#6E747D">untraced</text>
+  </g>
+  <line x1="56" y1="1046" x2="414" y2="1046" stroke="#16181C"/>
+  <text x="56" y="1064" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="12.5" font-weight="600" fill="#16181C">TOTAL</text>
+  <text x="414" y="1064" text-anchor="end" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="12.5" font-weight="600" fill="#8A1F2B">never invoiced</text>
+
+  <text x="40" y="1112" font-family="Georgia, serif" font-size="14.5" font-style="italic" fill="#8A1F2B">Paid forever. By everyone.</text>
+  <text x="40" y="1132" font-family="Georgia, serif" font-size="14.5" font-style="italic" fill="#8A1F2B">Attributed to nobody.</text>
+
+  <!-- ============ RIGHT COLUMN : FULL-PRICE PATH ============ -->
+  <text x="470" y="352" font-family="Georgia, serif" font-size="19" fill="#1D4E5F">The full-price path</text>
+  <line x1="470" y1="364" x2="860" y2="364" stroke="#1D4E5F" stroke-width="2"/>
+
+  <rect x="470" y="384" width="390" height="72" fill="#EAEFF1" stroke="#1D4E5F" stroke-width="1.2"/>
+  <text x="486" y="408" font-size="15" font-weight="600" fill="#1D4E5F">Need recorded at full price</text>
+  <text x="486" y="428" font-size="12.5" fill="#6E747D">first conversation: what is needed only.</text>
+  <text x="486" y="445" font-size="12.5" fill="#6E747D">Engineers present — estimation reflex is not.</text>
+  <line x1="665" y1="456" x2="665" y2="484" stroke="#1D4E5F" stroke-width="1.5" marker-end="url(#arP)"/>
+
+  <rect x="470" y="496" width="390" height="72" fill="#FFFFFF" stroke="#1D4E5F" stroke-width="1.2"/>
+  <text x="486" y="520" font-size="15" font-weight="600" fill="#1D4E5F">Feasibility, second conversation</text>
+  <text x="486" y="540" font-size="12.5" fill="#6E747D">current data · people with authority to</text>
+  <text x="486" y="557" font-size="12.5" fill="#6E747D">change the constraint, not only work inside it</text>
+  <line x1="665" y1="568" x2="665" y2="596" stroke="#1D4E5F" stroke-width="1.5" marker-end="url(#arP)"/>
+
+  <!-- the gap -->
+  <text x="470" y="620" font-size="12" letter-spacing="2" fill="#6E747D">THE GAP, MADE VISIBLE</text>
+  <rect x="470" y="632" width="390" height="26" fill="none" stroke="#1D4E5F" stroke-width="1.2"/>
+  <text x="482" y="650" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="12" fill="#1D4E5F">FULL PRICE — on record</text>
+  <rect x="470" y="666" width="215" height="26" fill="#1D4E5F"/>
+  <text x="482" y="684" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="12" fill="#FBFBF9">DELIVERED NOW</text>
+  <path d="M 689 666 L 689 692 M 856 666 L 856 692 M 689 679 L 856 679" stroke="#8A1F2B" stroke-width="1.2"/>
+  <text x="772" y="712" text-anchor="middle" font-size="12.5" font-style="italic" fill="#8A1F2B">the difference, owned</text>
+  <line x1="665" y1="722" x2="665" y2="750" stroke="#1D4E5F" stroke-width="1.5" marker-end="url(#arP)"/>
+
+  <rect x="470" y="762" width="390" height="46" fill="#FFFFFF" stroke="#1D4E5F" stroke-width="1.2"/>
+  <text x="665" y="782" text-anchor="middle" font-size="14.5" font-weight="600" fill="#1D4E5F">A deliberate staging decision</text>
+  <text x="665" y="799" text-anchor="middle" font-size="12.5" fill="#6E747D">constructive staging, not destructive discounting</text>
+
+  <path d="M 610 808 L 610 828 L 545 828 L 545 852" fill="none" stroke="#1D4E5F" stroke-width="1.5" marker-end="url(#arP)"/>
+  <path d="M 720 808 L 720 828 L 785 828 L 785 852" fill="none" stroke="#1D4E5F" stroke-width="1.5" marker-end="url(#arP)"/>
+
+  <rect x="470" y="864" width="150" height="66" fill="#EAEFF1" stroke="#1D4E5F" stroke-width="1"/>
+  <text x="545" y="890" text-anchor="middle" font-size="13.5" font-weight="600" fill="#16181C">Increment</text>
+  <text x="545" y="908" text-anchor="middle" font-size="12" fill="#6E747D">shipped</text>
+
+  <rect x="710" y="864" width="150" height="66" fill="#EAEFF1" stroke="#1D4E5F" stroke-width="1"/>
+  <text x="785" y="884" text-anchor="middle" font-size="13.5" font-weight="600" fill="#16181C">Recorded gap</text>
+  <text x="785" y="902" text-anchor="middle" font-size="12" fill="#6E747D">capability · funding ·</text>
+  <text x="785" y="918" text-anchor="middle" font-size="12" fill="#6E747D">prioritisation signal</text>
+
+  <line x1="665" y1="930" x2="665" y2="958" stroke="#1D4E5F" stroke-width="1.5" marker-end="url(#arP)"/>
+
+  <rect x="470" y="970" width="390" height="76" fill="#FFFFFF" stroke="#1D4E5F" stroke-width="1.2"/>
+  <text x="486" y="994" font-size="14.5" font-weight="600" fill="#1D4E5F">Nothing is transferred silently</text>
+  <text x="486" y="1014" font-size="12.5" fill="#6E747D">The gap between need and capacity becomes</text>
+  <text x="486" y="1031" font-size="12.5" fill="#6E747D">someone's decision rather than nobody's habit.</text>
+
+  <text x="470" y="1112" font-family="Georgia, serif" font-size="14.5" font-style="italic" fill="#1D4E5F">Paid once. Visibly. By people</text>
+  <text x="470" y="1132" font-family="Georgia, serif" font-size="14.5" font-style="italic" fill="#1D4E5F">equipped to argue about it.</text>
+
+  <!-- ============ FOOTER ============ -->
+  <line x1="40" y1="1158" x2="860" y2="1158" stroke="#16181C" stroke-width="1"/>
+  <text x="40" y="1188" font-family="Georgia, serif" font-size="17" fill="#16181C">You cannot audit a private price list. It leaves no artefact.</text>
+  <text x="40" y="1208" font-family="Georgia, serif" font-size="17" font-style="italic" fill="#8A1F2B">You can audit its receipts.</text>
+</svg>

@@ -1,0 +1,95 @@
+<svg viewBox="0 0 900 980" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arD" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#8A1F2B"/>
+    </marker>
+    <marker id="arP" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#1D4E5F"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="980" fill="#FBFBF9"/>
+
+  <!-- HEADER -->
+  <text x="40" y="50" font-size="12" letter-spacing="2.4" fill="#6E747D">FIGURE 1</text>
+  <text x="40" y="94" font-family="Georgia, serif" font-size="30" fill="#16181C">The discount is not a saving.</text>
+  <text x="40" y="130" font-family="Georgia, serif" font-size="30" fill="#16181C">It only decides <tspan font-style="italic">where the cost appears.</tspan></text>
+  <line x1="40" y1="154" x2="860" y2="154" stroke="#C9CCD1" stroke-width="1"/>
+
+  <!-- REAL NEED -->
+  <text x="450" y="192" text-anchor="middle" font-size="12" letter-spacing="2" fill="#6E747D">THE FULL POSSIBILITY</text>
+  <rect x="245" y="208" width="410" height="62" fill="#FFFFFF" stroke="#16181C" stroke-width="1.5"/>
+  <text x="450" y="233" text-anchor="middle" font-size="15.5" font-weight="600" fill="#16181C">What would genuinely solve this?</text>
+  <text x="450" y="254" text-anchor="middle" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="12" fill="#6E747D">UNPRICED · BEFORE FEASIBILITY</text>
+
+  <path d="M 398 270 L 398 294 L 235 294 L 235 328" fill="none" stroke="#8A1F2B" stroke-width="1.5" marker-end="url(#arD)"/>
+  <path d="M 502 270 L 502 294 L 665 294 L 665 328" fill="none" stroke="#1D4E5F" stroke-width="1.5" marker-end="url(#arP)"/>
+
+  <!-- COLUMN HEADS -->
+  <text x="40" y="362" font-family="Georgia, serif" font-size="19" fill="#8A1F2B">Discounted ask</text>
+  <line x1="40" y1="374" x2="430" y2="374" stroke="#8A1F2B" stroke-width="2"/>
+
+  <text x="470" y="362" font-family="Georgia, serif" font-size="19" fill="#1D4E5F">Full-price ask</text>
+  <line x1="470" y1="374" x2="860" y2="374" stroke="#1D4E5F" stroke-width="2"/>
+
+  <!-- STAGE 1 -->
+  <rect x="40" y="398" width="390" height="92" fill="#F1EDEE" stroke="#8A1F2B" stroke-width="1.2"/>
+  <text x="56" y="424" font-size="15" font-weight="600" fill="#8A1F2B">Need silently reduced</text>
+  <text x="56" y="447" font-size="12.8" fill="#6E747D">The requirement is adjusted to fit</text>
+  <text x="56" y="466" font-size="12.8" fill="#6E747D">anticipated capacity before anyone sees it.</text>
+
+  <rect x="470" y="398" width="390" height="92" fill="#EAEFF1" stroke="#1D4E5F" stroke-width="1.2"/>
+  <text x="486" y="424" font-size="15" font-weight="600" fill="#1D4E5F">Need recorded honestly</text>
+  <text x="486" y="447" font-size="12.8" fill="#6E747D">The requirement is captured before</text>
+  <text x="486" y="466" font-size="12.8" fill="#6E747D">capacity, budget, or staging is applied.</text>
+
+  <line x1="235" y1="490" x2="235" y2="526" stroke="#8A1F2B" stroke-width="1.5" marker-end="url(#arD)"/>
+  <line x1="665" y1="490" x2="665" y2="526" stroke="#1D4E5F" stroke-width="1.5" marker-end="url(#arP)"/>
+
+  <!-- STAGE 2 -->
+  <rect x="40" y="538" width="390" height="86" fill="#FFFFFF" stroke="#8A1F2B" stroke-width="1.2"/>
+  <text x="56" y="564" font-size="15" font-weight="600" fill="#8A1F2B">Easy to approve and ship</text>
+  <text x="56" y="587" font-size="12.8" fill="#6E747D">Targets are met. Metrics look healthy.</text>
+  <text x="56" y="606" font-size="12.8" fill="#6E747D">The missing ambition leaves no trace.</text>
+
+  <rect x="470" y="538" width="390" height="86" fill="#FFFFFF" stroke="#1D4E5F" stroke-width="1.2"/>
+  <text x="486" y="564" font-size="15" font-weight="600" fill="#1D4E5F">Feasibility applied afterwards</text>
+  <text x="486" y="587" font-size="12.8" fill="#6E747D">Build now, stage, invest, explore, or decline —</text>
+  <text x="486" y="606" font-size="12.8" fill="#6E747D">but the original need remains visible.</text>
+
+  <line x1="235" y1="624" x2="235" y2="660" stroke="#8A1F2B" stroke-width="1.5" marker-end="url(#arD)"/>
+  <line x1="665" y1="624" x2="665" y2="660" stroke="#1D4E5F" stroke-width="1.5" marker-end="url(#arP)"/>
+
+  <!-- STAGE 3 -->
+  <rect x="40" y="672" width="390" height="132" fill="#F1EDEE" stroke="#8A1F2B" stroke-width="1.2"/>
+  <text x="56" y="698" font-size="15" font-weight="600" fill="#8A1F2B">Hidden cost</text>
+  <text x="56" y="724" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="12.5" fill="#16181C">support · manual work · workarounds</text>
+  <text x="56" y="746" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="12.5" fill="#16181C">rework · slower future delivery</text>
+  <line x1="56" y1="765" x2="414" y2="765" stroke="#C9CCD1"/>
+  <text x="56" y="788" font-size="12.8" font-style="italic" fill="#8A1F2B">Paid repeatedly, across the organization.</text>
+
+  <rect x="470" y="672" width="390" height="132" fill="#EAEFF1" stroke="#1D4E5F" stroke-width="1.2"/>
+  <text x="486" y="698" font-size="15" font-weight="600" fill="#1D4E5F">Visible gap</text>
+  <text x="486" y="724" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="12.5" fill="#16181C">need − current capacity = explicit choice</text>
+  <text x="486" y="746" font-family="ui-monospace, SF Mono, Menlo, monospace" font-size="12.5" fill="#16181C">capability · funding · prioritization</text>
+  <line x1="486" y1="765" x2="844" y2="765" stroke="#C9CCD1"/>
+  <text x="486" y="788" font-size="12.8" font-style="italic" fill="#1D4E5F">Decided explicitly, by someone accountable.</text>
+
+  <!-- OUTCOME -->
+  <line x1="235" y1="804" x2="235" y2="840" stroke="#8A1F2B" stroke-width="1.5" marker-end="url(#arD)"/>
+  <line x1="665" y1="804" x2="665" y2="840" stroke="#1D4E5F" stroke-width="1.5" marker-end="url(#arP)"/>
+
+  <rect x="40" y="852" width="390" height="62" fill="#FFFFFF" stroke="#8A1F2B" stroke-width="1.2"/>
+  <text x="235" y="879" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-style="italic" fill="#8A1F2B">The cost is moved.</text>
+  <text x="235" y="899" text-anchor="middle" font-size="12.8" fill="#6E747D">The decision remains invisible.</text>
+
+  <rect x="470" y="852" width="390" height="62" fill="#FFFFFF" stroke="#1D4E5F" stroke-width="1.2"/>
+  <text x="665" y="879" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-style="italic" fill="#1D4E5F">The gap is owned.</text>
+  <text x="665" y="899" text-anchor="middle" font-size="12.8" fill="#6E747D">The trade-off becomes deliberate.</text>
+
+  <!-- FOOTER -->
+  <line x1="40" y1="942" x2="860" y2="942" stroke="#16181C" stroke-width="1"/>
+  <text x="450" y="968" text-anchor="middle" font-family="Georgia, serif" font-size="17" fill="#16181C">
+    The discount does not remove the cost. <tspan font-style="italic">It moves it.</tspan>
+  </text>
+</svg>
