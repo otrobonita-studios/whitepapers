@@ -150,10 +150,56 @@ class Doc:
                 parts.append(ch.tail)
         return ''.join(parts)
 
+    def cover_metadata(self, path):
+        """Recover cover metadata from the template's named text frames."""
+        frames = {}
+        for frame in self.content.iter(q('draw:frame')):
+            name = frame.get(q('draw:name'))
+            if not name or not name.startswith('Text Frame '):
+                continue
+            paragraphs = []
+            for p in frame.iter(q('text:p')):
+                value = self.text_of(p, mark=False).strip()
+                if value:
+                    paragraphs.append(value)
+            frames[name] = paragraphs
+
+        title = ' '.join(frames.get('Text Frame 1', []))
+        subtitle = ' '.join(frames.get('Text Frame 2', []))
+
+        series = ''
+        author = ''
+        details = frames.get('Text Frame 3', [])
+        detail_lines = []
+        for value in details:
+            detail_lines.extend(x.strip() for x in value.splitlines() if x.strip())
+        for i, value in enumerate(detail_lines):
+            if value.lower().startswith('a part of the series') and i + 1 < len(detail_lines):
+                series = detail_lines[i + 1]
+            if 'Otrobonita AI Labs' in value:
+                author = value.replace('·', '/').strip()
+
+        version_match = re.search(r'-v([0-9.]+)$', Path(path).stem, re.I)
+        return {
+            'title': re.sub(r'\s+', ' ', title).strip(),
+            'subtitle': re.sub(r'\s+', ' ', subtitle).strip(),
+            'series': re.sub(r'\s+', ' ', series).strip(),
+            'author': re.sub(r'\s+', ' ', author).strip(),
+            'version': version_match.group(1) if version_match else '',
+        }
+
 
 def convert(path):
     doc = Doc(path)
     body = doc.content.find(q('office:body')).find(q('office:text'))
+
+    # Cover text lives inside named drawing frames. It is emitted as metadata,
+    # not as article prose; otherwise Writer's nested frame paragraphs appear
+    # as duplicated title/body content.
+    frame_children = set()
+    for frame in body.iter(q('draw:frame')):
+        for sub in frame.iter():
+            frame_children.add(id(sub))
 
     # Single-row tables are layout boxes; let their paragraphs flow as prose.
     grid_children, layout = set(), set()
@@ -192,7 +238,8 @@ def convert(path):
             emit()
             continue
 
-        if el.tag not in (q('text:p'), q('text:h')) or id(el) in grid_children:
+        if el.tag not in (q('text:p'), q('text:h')) or id(el) in grid_children \
+                or id(el) in frame_children or el.find('.//draw:frame', NS) is not None:
             continue
 
         raw = doc.text_of(el).strip()
@@ -205,6 +252,12 @@ def convert(path):
 
         if id(el) in list_items:
             emit('- ' + raw)
+            continue
+        # The template also uses visually formatted bullet paragraphs rather
+        # than Writer list objects. Normalize those to real Markdown lists so
+        # downstream renderers preserve list semantics.
+        if re.match(r'^•\s*', raw):
+            emit('- ' + re.sub(r'^•\s*', '', raw))
             continue
         if role == 'h1':
             emit(); emit('## ' + raw); emit()
@@ -225,7 +278,22 @@ def convert(path):
             else:
                 emit(raw); emit()
 
-    md = re.sub(r'\n{3,}', '\n\n', '\n'.join(out)).strip() + '\n'
+    meta = doc.cover_metadata(path)
+    header = []
+    if meta['title']:
+        header.append('# ' + meta['title'])
+    if meta['subtitle']:
+        header.extend(['', '### ' + meta['subtitle']])
+    if meta['author']:
+        header.extend(['', '**Author:** ' + meta['author']])
+    if meta['series']:
+        header.append('**A part of the series:** ' + meta['series'])
+    if meta['version']:
+        header.append('**Document Version:** ' + meta['version'])
+    if header:
+        header.extend(['', '---', ''])
+
+    md = re.sub(r'\n{3,}', '\n\n', '\n'.join(header + out)).strip() + '\n'
     return md, doc
 
 
