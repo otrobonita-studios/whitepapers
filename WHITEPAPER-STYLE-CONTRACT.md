@@ -3,39 +3,45 @@
 How an Otrobonita whitepaper is authored, structured, and rendered.
 Companion to `WHITEPAPER-TEMPLATE.md`.
 
-**Scope:** applies to every paper under `public/whitepapers/`.
+**Scope:** applies to every paper in this repository (`<series>/<paper-slug>/`).
 
 ---
 
-## 1. Markdown is the source; ODT is a render target
+## 1. Two surfaces, no silent winner
 
-Papers are authored in Markdown and rendered into `WhitepaperTemplate.odt`
-for the PDF. The `.md` file is canonical — if the two disagree, the Markdown
-is right and the ODT needs re-rendering.
+Papers have two edit surfaces. Neither script is allowed to overwrite the other
+without a human diff.
 
-This matters for agents: **an agent fills in `WHITEPAPER-TEMPLATE.md`, never
-the `.odt` directly.**
+- **Markdown** owns argument and wording for the web. Agents fill in
+  `WHITEPAPER-TEMPLATE.md`. They must not hand-edit `.odt` XML.
+- **ODT → PDF** owns page design, cover, widows, and figure placement.
 
-The same holds for the author. Edit the `.md`, then run `md2odt.py` and export
-the PDF from LibreOffice. Regeneration keeps a hand-swapped cover image, so the
-only manual step is the export itself. Hand-editing the `.odt` body puts it out
-of sync with the `.md` that generates the web page — that has happened three
-times and was caught by luck each time. Editing ODT XML by hand produces style drift that is
-invisible until the PDF is generated.
+After an argument pass, run `md2odt.py` and re-export PDF. Regeneration keeps a
+hand-swapped cover image. After a design pass in Writer, run `odt2md.py` and
+diff the `.md` before shipping HTML.
+
+If `.md` and `.odt` disagree, stop. Hand-editing the ODT body without
+extracting Markdown has put the site out of sync three times. Editing ODT XML
+by hand also produces style drift that is invisible until the PDF is generated.
+
+See [HOW-WE-VERSION.md](HOW-WE-VERSION.md).
 
 ## 2. Repository layout
 
+This repository is laid out as `<series>/<paper-slug>/`. `versions/` is a draft
+drawer where it exists; it is not required. Shipped ODT/PDF often live in
+`final/`, sometimes next to the Markdown.
+
+The layout below is the intended house style for **new** papers, not a
+description of every existing folder:
+
 ```
-public/whitepapers/
-├── WhitepaperTemplate.odt          ← render target
-├── WHITEPAPER-TEMPLATE.md          ← authoring template (agents start here)
-├── WHITEPAPER-STYLE-CONTRACT.md    ← this file
+<series>/
 └── <paper-slug>/
-    ├── versions/                   ← every draft .md, numbered
+    ├── <paper-slug>-vX.Y.md        ← argument / web wording
+    ├── versions/                   ← drafts, when kept
     └── final/                      ← shipped .odt, .pdf, cover, figures
 ```
-
-Series papers nest one level deeper: `<series>/<paper-slug>/{versions,final}/`.
 
 Slugs are kebab-case and derived from the title, not the subtitle:
 `a-chunky-size-fits-nobody`, not `why-there-is-no-universal-chunking-strategy`.

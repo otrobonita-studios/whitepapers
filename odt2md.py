@@ -2,10 +2,10 @@
 """
 odt2md.py — extract an Otrobonita paper .odt into Markdown.
 
-The .odt is the authoring surface: page flow, widows, and where a figure lands
-relative to its caption are only visible there. The .md is derived from it — a
-diffable, greppable, linkable reading copy, and the source the website pages
-are generated from.
+The .odt owns page flow, widows, and where a figure lands relative to its
+caption. The .md owns argument and wording for the web. After a design pass,
+run this script and diff the .md before shipping HTML. If the two disagree,
+stop — do not treat either file as a silent winner.
 
 Usage:
     python odt2md.py <paper.odt> <out.md>
